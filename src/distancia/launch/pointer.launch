@@ -1,0 +1,14 @@
+<launch>
+  <arg 
+    name="pointer"
+    default="0"
+  /> 
+ 
+  <node
+    pkg="distance"
+    type="depth"
+    name="depth_node"
+    output="screen"
+  />
+</launch>
+

@@ -1,0 +1,17 @@
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:[m[K In function ‘[01m[Kvoid callback_image(const ImageConstPtr&)[m[K’:
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:65:12:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K=[m[K’ token
+   65 |   distance [01;31m[K=[m[K 0.001*cv_ptr->image.at<u_int16_t>(xr, yr);
+      |            [01;31m[K^[m[K
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:65:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kxr[m[K’ was not declared in this scope
+   65 |   distance = 0.001*cv_ptr->image.at<u_int16_t>([01;31m[Kxr[m[K, yr);
+      |                                                [01;31m[K^~[m[K
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:65:52:[m[K [01;31m[Kerror: [m[K‘[01m[Kyr[m[K’ was not declared in this scope; did you mean ‘[01m[Kyn[m[K’?
+   65 |   distance = 0.001*cv_ptr->image.at<u_int16_t>(xr, [01;31m[Kyr[m[K);
+      |                                                    [01;31m[K^~[m[K
+      |                                                    [32m[Kyn[m[K
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:66:22:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K<<[m[K’ token
+   66 |   std::cout<<distance[01;31m[K<<[m[Kstd::endl;
+      |                      [01;31m[K^~[m[K
+make[2]: *** [CMakeFiles/depth.dir/build.make:63: CMakeFiles/depth.dir/src/depth.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:270: CMakeFiles/depth.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,64 @@
+[  0%] Built target std_msgs_generate_messages_py
+[35m[1mScanning dependencies of target depth[0m
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  7%] [32mBuilding CXX object CMakeFiles/depth.dir/src/depth.cpp.o[0m
+[  7%] Built target _distance_generate_messages_check_deps_BoundingBoxes
+[  7%] Built target _distance_generate_messages_check_deps_BoundingBox
+[ 28%] Built target distance_generate_messages_py
+[ 28%] Built target std_msgs_generate_messages_cpp
+[ 50%] Built target distance_generate_messages_eus
+[ 50%] Built target std_msgs_generate_messages_lisp
+[ 64%] Built target distance_generate_messages_nodejs
+[ 78%] Built target distance_generate_messages_lisp
+[ 92%] Built target distance_generate_messages_cpp
+[ 92%] Built target distance_generate_messages
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:28:1:[m[K [01;31m[Kerror: [m[Kstray ‘[01m[K`[m[K’ in program
+   28 | [01;31m[K`[m[Kclass ImageConverter
+      | [01;31m[K^[m[K
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:95:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+   95 | }
+      |  [01;31m[K^[m[K
+      |  [32m[K;[m[K
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:[m[K In constructor ‘[01m[KImageConverter::ImageConverter()[m[K’:
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:50:46:[m[K [01;31m[Kerror: [m[K‘[01m[KPoseStamped[m[K’ is not a member of ‘[01m[Kgeometry_msgs[m[K’
+   50 |     _pub_pose = nh_.advertise<geometry_msgs::[01;31m[KPoseStamped[m[K>("object_pose", 1);
+      |                                              [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:50:46:[m[K [01;31m[Kerror: [m[K‘[01m[KPoseStamped[m[K’ is not a member of ‘[01m[Kgeometry_msgs[m[K’
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:50:75:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kros::NodeHandle::advertise<<expression error> >(const char [12], int)[m[K’
+   50 |     _pub_pose = nh_.advertise<geometry_msgs::PoseStamped>("object_pose", 1[01;31m[K)[m[K;
+      |                                                                           [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:3[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:249:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M> ros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, bool)[m[K’
+  249 |     Publisher [01;36m[Kadvertise[m[K(const std::string& topic, uint32_t queue_size, bool latch = false)
+      |               [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:249:15:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:50:75:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   50 |     _pub_pose = nh_.advertise<geometry_msgs::PoseStamped>("object_pose", 1[01;31m[K)[m[K;
+      |                                                                           [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:3[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:315:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M> ros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, const SubscriberStatusCallback&, const SubscriberStatusCallback&, const VoidConstPtr&, bool)[m[K’
+  315 |   Publisher [01;36m[Kadvertise[m[K(const std::string& topic, uint32_t queue_size,
+      |             [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:315:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:50:75:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   50 |     _pub_pose = nh_.advertise<geometry_msgs::PoseStamped>("object_pose", 1[01;31m[K)[m[K;
+      |                                                                           [01;31m[K^[m[K
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:51:9:[m[K [01;31m[Kerror: [m[K‘[01m[KnamedWindow[m[K’ is not a member of ‘[01m[Kcv[m[K’
+   51 |     cv::[01;31m[KnamedWindow[m[K(OPENCV_WINDOW);
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:51:21:[m[K [01;31m[Kerror: [m[K‘[01m[KOPENCV_WINDOW[m[K’ was not declared in this scope
+   51 |     cv::namedWindow([01;31m[KOPENCV_WINDOW[m[K);
+      |                     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:[m[K In destructor ‘[01m[KImageConverter::~ImageConverter()[m[K’:
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:56:9:[m[K [01;31m[Kerror: [m[K‘[01m[KdestroyWindow[m[K’ is not a member of ‘[01m[Kcv[m[K’
+   56 |     cv::[01;31m[KdestroyWindow[m[K(OPENCV_WINDOW);
+      |         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:56:23:[m[K [01;31m[Kerror: [m[K‘[01m[KOPENCV_WINDOW[m[K’ was not declared in this scope
+   56 |     cv::destroyWindow([01;31m[KOPENCV_WINDOW[m[K);
+      |                       [01;31m[K^~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/depth.dir/build.make:63: CMakeFiles/depth.dir/src/depth.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:270: CMakeFiles/depth.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

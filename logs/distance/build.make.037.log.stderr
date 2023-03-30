@@ -1,0 +1,12 @@
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:[m[K In function ‘[01m[Kvoid callback_BoundingBoxes(const ConstPtr&)[m[K’:
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:54:41:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K)[m[K’ token
+   54 |   for  (int i = 0; i< bboxes.size(), i++[01;31m[K)[m[K{
+      |                                         [01;31m[K^[m[K
+      |                                         [32m[K;[m[K
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:55:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kbbox[m[K’ was not declared in this scope; did you mean ‘[01m[Kbboxes[m[K’?
+   55 |     int xmin=[01;31m[Kbbox[m[K.bounding_boxes[i].xmin;
+      |              [01;31m[K^~~~[m[K
+      |              [32m[Kbboxes[m[K
+make[2]: *** [CMakeFiles/depth.dir/build.make:63: CMakeFiles/depth.dir/src/depth.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:270: CMakeFiles/depth.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

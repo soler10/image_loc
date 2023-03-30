@@ -1,0 +1,26 @@
+[35m[1mScanning dependencies of target depth[0m
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  7%] [32mBuilding CXX object CMakeFiles/depth.dir/src/depth.cpp.o[0m
+[  7%] Built target std_msgs_generate_messages_cpp
+[  7%] Built target std_msgs_generate_messages_lisp
+[  7%] Built target _distance_generate_messages_check_deps_BoundingBoxes
+[  7%] Built target _distance_generate_messages_check_deps_BoundingBox
+[ 50%] Built target distance_generate_messages_py
+[ 50%] Built target distance_generate_messages_eus
+[ 71%] Built target distance_generate_messages_cpp
+[ 78%] Built target distance_generate_messages_nodejs
+[ 92%] Built target distance_generate_messages_lisp
+[ 92%] Built target distance_generate_messages
+[100%] [32m[1mLinking CXX executable /home/abril/catkin_obj/devel/.private/distance/lib/distance/depth[0m
+/usr/bin/ld: CMakeFiles/depth.dir/src/depth.cpp.o: in function `callback_image(boost::shared_ptr<sensor_msgs::Image_<std::allocator<void> > const> const&)':
+depth.cpp:(.text+0x11d): undefined reference to `cv_bridge::toCvCopy(boost::shared_ptr<sensor_msgs::Image_<std::allocator<void> > const> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/usr/bin/ld: CMakeFiles/depth.dir/src/depth.cpp.o: in function `cv::Mat::~Mat()':
+depth.cpp:(.text._ZN2cv3MatD2Ev[_ZN2cv3MatD5Ev]+0x3d): undefined reference to `cv::fastFree(void*)'
+/usr/bin/ld: CMakeFiles/depth.dir/src/depth.cpp.o: in function `cv::Mat::release()':
+depth.cpp:(.text._ZN2cv3Mat7releaseEv[_ZN2cv3Mat7releaseEv]+0x4f): undefined reference to `cv::Mat::deallocate()'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/depth.dir/build.make:101: /home/abril/catkin_obj/devel/.private/distance/lib/distance/depth] Error 1
+make[1]: *** [CMakeFiles/Makefile2:270: CMakeFiles/depth.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

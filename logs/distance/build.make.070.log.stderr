@@ -1,0 +1,12 @@
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:[m[K In function ‘[01m[Kvoid position_extraction(float, float, float, float)[m[K’:
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:34:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kx_min[m[K’ was not declared in this scope; did you mean ‘[01m[Kxmin[m[K’?
+   34 |   float x_punt_mig=(xmax-xmin)/2+[01;31m[Kx_min[m[K;
+      |                                  [01;31m[K^~~~~[m[K
+      |                                  [32m[Kxmin[m[K
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:35:34:[m[K [01;31m[Kerror: [m[K‘[01m[Ky_min[m[K’ was not declared in this scope; did you mean ‘[01m[Kymin[m[K’?
+   35 |   float y_punt_mig=(ymax-ymin)/2+[01;31m[Ky_min[m[K;
+      |                                  [01;31m[K^~~~~[m[K
+      |                                  [32m[Kymin[m[K
+make[2]: *** [CMakeFiles/depth.dir/build.make:63: CMakeFiles/depth.dir/src/depth.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:270: CMakeFiles/depth.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

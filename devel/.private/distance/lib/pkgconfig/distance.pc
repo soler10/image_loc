@@ -1,0 +1,8 @@
+prefix=/home/abril/catkin_obj/devel/.private/distance
+
+Name: distance
+Description: Description of distance
+Version: 0.0.1
+Cflags: -I/home/abril/catkin_obj/devel/.private/distance/include -I/home/abril/catkin_obj/src/distancia/include
+Libs: -L${prefix}/lib 
+Requires: roscpp message_runtime sensor_msgs opencv2 cv_bridge

@@ -1,0 +1,12 @@
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:[m[K In function ‘[01m[Kvoid position_extraction(float, float, float, float)[m[K’:
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:33:33:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kfloat*[m[K’ to ‘[01m[Kfloat[m[K’
+   33 |   float distance = get_distance([01;31m[Kpunt_mig[m[K);
+      |                                 [01;31m[K^~~~~~~~[m[K
+      |                                 [01;31m[K|[m[K
+      |                                 [01;31m[Kfloat*[m[K
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:25:26:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kfloat get_distance(float)[m[K’
+   25 | float get_distance([01;36m[Kfloat punt[m[K){
+      |                    [01;36m[K~~~~~~^~~~[m[K
+make[2]: *** [CMakeFiles/depth.dir/build.make:63: CMakeFiles/depth.dir/src/depth.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:270: CMakeFiles/depth.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,6 @@
+devel_space: /home/abril/catkin_obj/devel
+install: false
+install_space: /home/abril/catkin_obj/install
+profile: default
+source_space: /home/abril/catkin_obj/src
+workspace: /home/abril/catkin_obj

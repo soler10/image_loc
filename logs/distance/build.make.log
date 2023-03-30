@@ -1,0 +1,17 @@
+[35m[1mScanning dependencies of target depth[0m
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_py
+[  7%] [32mBuilding CXX object CMakeFiles/depth.dir/src/depth.cpp.o[0m
+[  7%] Built target std_msgs_generate_messages_cpp
+[  7%] Built target std_msgs_generate_messages_lisp
+[  7%] Built target _distance_generate_messages_check_deps_BoundingBoxes
+[  7%] Built target _distance_generate_messages_check_deps_BoundingBox
+[ 71%] Built target distance_generate_messages_cpp
+[ 78%] Built target distance_generate_messages_eus
+[ 71%] Built target distance_generate_messages_nodejs
+[ 78%] Built target distance_generate_messages_py
+[ 92%] Built target distance_generate_messages_lisp
+[ 92%] Built target distance_generate_messages
+[100%] [32m[1mLinking CXX executable /home/abril/catkin_obj/devel/.private/distance/lib/distance/depth[0m
+[100%] Built target depth

@@ -1,0 +1,24 @@
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:[m[K In function ‘[01m[Kvoid callback_BoundingBoxes(const ConstPtr&)[m[K’:
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:54:41:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K)[m[K’ token
+   54 |   for  (int i = 0; i< bboxes.size(), i++[01;31m[K)[m[K{
+      |                                         [01;31m[K^[m[K
+      |                                         [32m[K;[m[K
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:55:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::vector<distance::BoundingBox_<std::allocator<void> >, std::allocator<distance::BoundingBox_<std::allocator<void> > > >[m[K’ has no member named ‘[01m[Kbounding_boxes[m[K’
+   55 |     int xmin=bboxes.[01;31m[Kbounding_boxes[m[K[i].xmin;
+      |                     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:56:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::vector<distance::BoundingBox_<std::allocator<void> >, std::allocator<distance::BoundingBox_<std::allocator<void> > > >[m[K’ has no member named ‘[01m[Kbounding_boxes[m[K’
+   56 |     int xmax=bboxes.[01;31m[Kbounding_boxes[m[K[i].xmax;
+      |                     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:57:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::vector<distance::BoundingBox_<std::allocator<void> >, std::allocator<distance::BoundingBox_<std::allocator<void> > > >[m[K’ has no member named ‘[01m[Kbounding_boxes[m[K’
+   57 |     int ymin=bboxes.[01;31m[Kbounding_boxes[m[K[i].ymin;
+      |                     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:58:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::vector<distance::BoundingBox_<std::allocator<void> >, std::allocator<distance::BoundingBox_<std::allocator<void> > > >[m[K’ has no member named ‘[01m[Kbounding_boxes[m[K’
+   58 |     int ymax=bboxes.[01;31m[Kbounding_boxes[m[K[i].ymax;
+      |                     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:59:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kbbox[m[K’ was not declared in this scope; did you mean ‘[01m[Kbboxes[m[K’?
+   59 |     std::string classe = [01;31m[Kbbox[m[K.bounding_boxes[i].Class;
+      |                          [01;31m[K^~~~[m[K
+      |                          [32m[Kbboxes[m[K
+make[2]: *** [CMakeFiles/depth.dir/build.make:63: CMakeFiles/depth.dir/src/depth.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:270: CMakeFiles/depth.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

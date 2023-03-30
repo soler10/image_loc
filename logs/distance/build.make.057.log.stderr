@@ -1,0 +1,15 @@
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:[m[K In function ‘[01m[Kvoid position_extraction(float, float, float, float)[m[K’:
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:27:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_distance[m[K’ was not declared in this scope; did you mean ‘[01m[Kdistance[m[K’?
+   27 |   float distance = [01;31m[Kget_distance[m[K(punt_mig);
+      |                    [01;31m[K^~~~~~~~~~~~[m[K
+      |                    [32m[Kdistance[m[K
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:[m[K In function ‘[01m[Kfloat get_distance(float*)[m[K’:
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:38:16:[m[K [01;31m[Kerror: [m[Karray must be initialized with a brace-enclosed initializer
+   38 |   float pix[2]=[01;31m[Kpunt[m[K;
+      |                [01;31m[K^~~~[m[K
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:39:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   39 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+make[2]: *** [CMakeFiles/depth.dir/build.make:63: CMakeFiles/depth.dir/src/depth.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:270: CMakeFiles/depth.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

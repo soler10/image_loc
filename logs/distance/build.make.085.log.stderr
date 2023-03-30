@@ -1,0 +1,10 @@
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:[m[K In function ‘[01m[Kvoid callback_image(const Image&)[m[K’:
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:55:67:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ has not been declared
+   55 |   IplImage* imgMsgToCv(sensor_msgs::Image::ConstPtr image_message,[01;31m[Kstring[m[K cv_encoding="passthrough")
+      |                                                                   [01;31m[K^~~~~~[m[K
+[01m[K/home/abril/catkin_obj/src/distancia/src/depth.cpp:56:3:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kcolor_image[m[K’
+   56 |   [01;31m[Kcolor_image[m[K=msg;  //sensor_msgs::Image type
+      |   [01;31m[K^~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/depth.dir/build.make:63: CMakeFiles/depth.dir/src/depth.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:270: CMakeFiles/depth.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2
