@@ -6,8 +6,8 @@
  
   <node
     pkg="distance"
-    type="depth"
-    name="depth_node"
+    type="src/pointer.py"
+    name="depth"
     output="screen"
   />
 </launch>

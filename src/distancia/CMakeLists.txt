@@ -8,6 +8,7 @@ project(distance)
 
 find_package(catkin REQUIRED COMPONENTS 
 	roscpp 
+	rospy
 	geometry_msgs 
 	turtlesim 
 	sensor_msgs

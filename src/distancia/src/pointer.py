@@ -20,13 +20,13 @@ class MultiObject_Tracker:
         self.camera_link = "camera_link"
         self.camera_info = "/camera/color/camera_info"
         self.depth_img_topic = "/camera/aligned_depth_to_color/image_raw"
-        self.height=480
-        self.width=640
+        self.height=720
+        self.width=1280
         self.depth_img = np.zeros((self.height,self.width))
         self.br = tf.TransformBroadcaster()
         self.object_count = 0
         self.is_objects_found = False
-
+ 
 
     #callback functions:
     
@@ -71,7 +71,7 @@ class MultiObject_Tracker:
                         x = rect[2] - (rect[2]-rect[0])/2
                         y = rect[3] - (rect[3]-rect[1])/2
                         loc = [int(x),int(y)]
-                        #print(loc)
+                        print(loc)
                         d = self.depth_img[loc[1]][loc[0]]
                         pose = self.convert_depth_to_phys_coord_using_realsense(loc[0],loc[1],d,self.cam_info)
                         pose_tf = np.array([pose[2]/1000, -pose[0]/1000, -pose[1]/1000])
