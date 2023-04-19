@@ -14,6 +14,9 @@ find_package(catkin REQUIRED COMPONENTS
 	sensor_msgs
 	std_msgs 
 	message_generation
+	cv_bridge
+	nav_msgs
+	
 	
 )
 
@@ -45,7 +48,7 @@ catkin_package(
 
 
 # Specify locations of header files.
-include_directories(include ${catkin_INCLUDE_DIRS})
+include_directories(include ${catkin_INCLUDE_DIRS} ${OpenCV_INCLUDE_DIRS} )
 include_directories(/usr/include/opencv4/)
 
 # Declare the executable, along with its source files.

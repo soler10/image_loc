@@ -20,8 +20,6 @@
 #include <tf/transform_listener.h>
 #include <nav_msgs/OccupancyGrid.h>
 
-
-
 using namespace cv;
 
 //
@@ -52,7 +50,7 @@ void callback_array(const visualization_msgs::MarkerArray& array){
     float height =marker.pose.position.z;
     std::string classe=marker.text;
     //sleep x veure què passa
-    std::this_thread::sleep_for(std::chrono::seconds(1));
+    std::this_thread::sleep_for(std::chrono::seconds(2));
     
     ROS_INFO_STREAM(classe <<"  "<< x <<"  " << y << "  "<<cell_c << "   " <<cell_r);
     
@@ -95,16 +93,18 @@ void callback_array(const visualization_msgs::MarkerArray& array){
   //color_image=msg;  //sensor_msgs::Image type
   //ROS_INFO_STREAM("linia 52 "<< point);
   //Convert a sensor_msgs::Image message to an OpenCV IplImage.
+  /*
   
+
+  
+  ROS_INFO_STREAM(cell_x);
+  map.at<double>(cell_x,cell_y)=6;
   //sensor_msgs::ImagePtr msg = cv_bridge::CvImage(std_msgs::Header(), "bgr8", map).toImageMsg();
   //pub.publish(msg);
   //sensor_msgs::CvBridge bridge;
-  
-}
+  //img=msg;
 
-void callback_map(const nav_msgs::OccupancyGrid& data){
-  geometry_msgs::Pose origin=data.info.origin;
-  ROS_INFO_STREAM(data.header);
+  */
 }
 
 
@@ -119,12 +119,9 @@ int main(int argc, char **argv) {
   //ROS_INFO_STREAM("pub created");
   // Create a subscriber object.
   ros::Subscriber pointer = nh.subscribe("/obj_info", 100,&callback_array);
-  ros::Subscriber map = nh.subscribe("/rtabmap/grid_map", 100,&callback_map);
   //image_transport::Publisher pub = it_.advertise("camera/image", 1);
   
-  //Creació del mapa per rviz
   nav_msgs::OccupancyGrid mapa;
-
 
   
 

@@ -7,11 +7,14 @@ import tf
 #from darknet_ros_msgs.msg import BoundingBoxes,ObjectCount
 from sensor_msgs.msg import Image,CameraInfo
 from distance.msg import BoundingBox, BoundingBoxes
+
 from geometry_msgs.msg import PointStamped
+from visualization_msgs.msg import MarkerArray,Marker
 import numpy as np
 import time
 import pyrealsense2
 from cv_bridge import CvBridge, CvBridgeError
+
 
 
 class MultiObject_Tracker:
@@ -59,6 +62,8 @@ class MultiObject_Tracker:
     def objects_tf_send(self):
         if self.is_objects_found == True:
         	
+            array = MarkerArray()
+            id_m=0
             self.is_objects_found = False
             for box in self.bounding_boxes:
                 for obj in self.objects_to_track:
@@ -71,33 +76,53 @@ class MultiObject_Tracker:
                         x = rect[2] - (rect[2]-rect[0])/2
                         y = rect[3] - (rect[3]-rect[1])/2
                         loc = [int(x),int(y)]
-                        print(loc)
+                        #print(loc)
                         d = self.depth_img[loc[1]][loc[0]]
                         pose = self.convert_depth_to_phys_coord_using_realsense(loc[0],loc[1],d,self.cam_info)
                         pose_tf = np.array([pose[2]/1000, -pose[0]/1000, -pose[1]/1000])
-                        rospy.loginfo("Found: "+obj+" Pose: "+str(pose_tf))
+                        #rospy.loginfo("Found: "+obj+" Pose: "+str(pose_tf))
                         self.br.sendTransform((pose_tf[0],pose_tf[1],pose_tf[2]), (0.0, 0.0, 0.0, 1.0),rospy.Time.now(),box.Class, self.camera_link)
-                        #publish pointer
-                        self.proj_point(pose_tf)
+                        #Marker
+                        x=pose_tf[0]
+                        y=pose_tf[1]
+                        z=pose_tf[2]
+                        marker=Marker()
+                        marker.header.frame_id = 'camera_link'
+                        marker.header.stamp = rospy.Time.now()
+                        # set shape, Arrow: 0; Cube: 1 ; Sphere: 2 ; Cylinder: 3
+                        marker.type = 2
+                        marker.id=id_m
+                        id_m=id_m+1
+                        marker.text=obj
+                        scale=0.06
+                        marker.scale.x =scale
+                        marker.scale.y =scale
+                        marker.scale.z =scale
                         
-                                                
-                           
+                        
+                        # Set the color
+                        marker.color.r = 0.0
+                        marker.color.b = 0.0
+                        marker.color.g = 1.0
+                        marker.color.a = 1.0
+                        
+                        marker.pose.position.x=x
+                        marker.pose.position.y=y
+                        marker.pose.position.z=z
+                        
+                        marker.pose.orientation.x = 0.0
+                        marker.pose.orientation.y = 0.0
+                        marker.pose.orientation.z = 0.0
+                        marker.pose.orientation.w = 1.0
+                        array.markers.append(marker)
+                        publisher_marker = rospy.Publisher('/marker', Marker, queue_size=15)
+                        publisher_marker.publish(marker)        
+            
+            publisher_obj = rospy.Publisher('/obj_info', MarkerArray, queue_size=10)
+            publisher_obj.publish(array)
 
-    def proj_point(self,pose):
-        x=pose[0]
-        y=pose[1]
-        z=pose[2]
-        #time.sleep(1)
-        point_msg = PointStamped()
-        point_msg.header.stamp = rospy.Time.now()
-        point_msg.header.frame_id = 'camera_link'
-        point_msg.point.x =x #point[0]
-        point_msg.point.y =y # point[1]
-        point_msg.point.z =z # point[2]
-        print(' x i y i z ',x,' ',y ,' ', z)
-        publisher = rospy.Publisher('/cep_found', PointStamped, queue_size=10)
-        publisher.publish(point_msg)
-    
+
+	                    
     def convert_depth_to_phys_coord_using_realsense(self,x, y, depth, cameraInfo):  
         _intrinsics = pyrealsense2.intrinsics()
         _intrinsics.width = cameraInfo.width
